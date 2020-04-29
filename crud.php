@@ -2,8 +2,8 @@
 
 interface Crud
 {
-	public function save();
-	public function readAll();
+	public function save($con);
+	public  static function readAll($con);
 	public function readUnique();
 	public function search();
 	public function update();

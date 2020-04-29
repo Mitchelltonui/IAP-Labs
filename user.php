@@ -27,24 +27,20 @@ public function getUserId()
 
 	
 }
-public function save()
+public function save($con)
 {
 	$fn = $this->first_name;
 	$ln = $this->last_name;
 	$city = $this->city_name;
-	$con = new DBConnector ();
-	$sql = "INSERT INTO users (first_name,last_name,user_city) VALUES ('$fn','$ln','$city')";
-	$res = mysqli_query($con->conn,$sql);
+	$sql = "INSERT INTO users(first_name,last_name,user_city) VALUES ('$fn','$ln','$city')";
+	$res = mysqli_query($con,$sql);
 	return $res;
 }
-public function readAll()
+public  static function readAll($con)
 {
-	$fn = $this->first_name;
-	$ln = $this->last_name;
-	$city = $this->city_name;
-	$con = new DBConnector ();
+	
 	$sql = "SELECT * FROM users";
-	$res = mysqli_query($con->conn,$sql);
+	$res = mysqli_query($con,$sql);
 	return $res;
 
 }

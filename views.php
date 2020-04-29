@@ -3,8 +3,7 @@ include_once 'DBConnector.php';
 include_once 'user.php';
 $con = new DBConnector;
     
-    $user = new User($first_name,$last_name, $city);
-    $res = $user->readAll();
+$res = User::readAll($con->conn);
 
     if(mysqli_num_rows($res) > 0){
         echo "<table>";
