@@ -63,48 +63,7 @@
             <br><br>
 
             <p><a href="logout.php">Want to Logout?</a></p><br><br>
-        <p>Lab one task:</p>
-        <div id="readAllTable">
-                <table >
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                        include_once "DBConnector.php";
-                        include_once "user.php";
-                        $res = user::readAll();
-                        
-                        while ($row = mysqli_fetch_array($res)){
-                            echo "
-                                <tr>
-                                    <td>".$row['id']."</td>
-                                    <td>".$row['username']."</td>
-                                    <td>".$row['first_name']."</td>
-                                    <td>".$row['last_name']."</td>
-                                    <td>".$row['user_city']."</td>
-                                    <td>".$row['user_email']."</td>
-                                    <td>".$row['user_phone']."</td>
-                                      
-                                </tr>
-                                ";
-                        
-                        
-                        }
-                    ?>
-                    </tbody>
-                </table>
-                </div>
-            
-        </div>
+        
     
     </body>
 

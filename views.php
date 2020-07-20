@@ -19,6 +19,14 @@ $res = User::readAll();
                 echo "<td>" . $row['first_name'] . "</td>";
                 echo "<td>" . $row['last_name'] . "</td>";
                 echo "<td>" . $row['user_city'] . "</td>";
+                echo "<td>" . $row['username'] . "</td>";
+                echo "<td>" . $row['password'] . "</td>";
+                echo "<td>" . $row['users_email'] . "</td>";
+                echo "<td>" . $row['user_phone'] . "</td>";
+                echo "<td>" . $row['profile_picture'] . "</td>";
+
+
+
             echo "</tr>";
         }
         echo "</table>";

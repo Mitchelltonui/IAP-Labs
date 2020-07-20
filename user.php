@@ -105,7 +105,7 @@ Class User implements Crud, Authenticator{
         try{
             $stmt = $DBConnection->prepare("INSERT INTO `users`(`first_name`, `last_name`, `user_city`, `username`, `password`, `users_email`, `user_phone`, `profile_picture`, `utc_timezone`, `offset`) VALUES (?,?,?,?,?,?,?,?,?,?)");
             
-            $stmt->bind_param('ssssssssss' ,$fn,$ln,$uEmail,$uPhone,$city,$userName,$pass,$pic,$utc,$offset);
+            $stmt->bind_param('ssssssssss' ,$fn,$ln,$city,$userName,$pass,$uEmail,$uPhone,$pic,$utc,$offset);
             if($stmt->execute()){
                 $res = true;
             }
